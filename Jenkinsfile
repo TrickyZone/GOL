@@ -5,6 +5,7 @@ pipeline{
       agent any
       steps{
         sh 'mvn compile'
+        rtMaven.deployer.deployArtifacts = true
       }       
     }
     stage('Code Quality'){
